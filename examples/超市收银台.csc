@@ -14,7 +14,7 @@ function printsheet(name,money,num)
     var sum_money = 0
     out.println("\n-------------------------购物清单--------------------------")
     out.println("-----------------------------------------------------------")
-    for i = 0, i < array.size(money), i++
+    for i = 0, i < money.size, i++
         sum_money += money[i] * num[i];
         out.println("商品："+ name[i] + " \t单价：" + money[i] +" \t数量："+num[i] +" \t共计：" +money[i] * num[i])             
     end
@@ -51,3 +51,17 @@ loop
         end
     end
 end
+## 测试样例 ，选中该部分后，按ctrl+/取消注释后拷贝，再回复称注释即可
+# 1
+# apple
+# 3
+# 3
+# 1
+# banana
+# 4
+# 10
+# 1
+# cake
+# 2
+# 13
+# 2
