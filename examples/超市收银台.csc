@@ -1,22 +1,22 @@
 @charset:gbk
 using system
 
-function addProduct(name,money,num)
+function addProduct(Name,Money,Num)
     out.print("请输入商品名字：")
-    name.push_back(in.input())
+    Name.push_back(in.input())
     out.print("请输入商品价格：")
-    money.push_back(in.input() )
+    Money.push_back(in.input() )
     out.print("请输入商品个数：")
-    num.push_back(in.input() )
+    Num.push_back(in.input() )
 end
 
-function printsheet(name,money,num)
+function printSheet(Name,Money,Num)
     var sum_money = 0
     out.println("\n-------------------------购物清单--------------------------")
     out.println("-----------------------------------------------------------")
-    for i = 0, i < money.size, i++
-        sum_money += money[i] * num[i];
-        out.println("商品："+ name[i] + " \t单价：" + money[i] +" \t数量："+num[i] +" \t共计：" +money[i] * num[i])             
+    for i = 0, i < Money.size, i++
+        sum_money += Money[i] * Num[i];
+        out.println("商品："+ Name[i] + " \t单价：" + Money[i] +" \t数量："+Num[i] +" \t共计：" +Money[i] * Num[i])             
     end
     out.println("-----------------------------------------------------------")
     out.println("总计："+ sum_money + "元")
@@ -39,7 +39,7 @@ loop
             addProduct(name,money,num)
         end
         case 2
-            printsheet(name,money,num)            
+            printSheet(name,money,num)            
         end
         case 3
             out.println("感谢您的使用!")
